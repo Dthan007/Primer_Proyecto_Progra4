@@ -48,8 +48,9 @@
             // opcion1ToolStripMenuItem
             // 
             opcion1ToolStripMenuItem.Name = "opcion1ToolStripMenuItem";
-            opcion1ToolStripMenuItem.Size = new Size(68, 20);
-            opcion1ToolStripMenuItem.Text = "opcion 1 ";
+            opcion1ToolStripMenuItem.Size = new Size(162, 20);
+            opcion1ToolStripMenuItem.Text = "Mantenimiento de Clientes";
+            opcion1ToolStripMenuItem.Click += opcion1ToolStripMenuItem_Click;
             // 
             // opcion2ToolStripMenuItem
             // 

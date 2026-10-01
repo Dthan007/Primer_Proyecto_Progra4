@@ -7,7 +7,7 @@ namespace Sistema_de_Ventas_y_Distribución
         public frmCentral()
         {
             InitializeComponent();
-            
+
         }
 
         private void ingresoYMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -17,6 +17,14 @@ namespace Sistema_de_Ventas_y_Distribución
             obj_IM.Dock = DockStyle.Fill;
             pnlGeneral.Controls.Add(obj_IM);
 
+        }
+
+        private void opcion1ToolStripMenuItem_Click(object sender, EventArgs e)//mantenimientoClientesToolStripMenuItem
+        {
+            pnlGeneral.Controls.Clear();
+            uscMantenimientoClientes obj_MC = new uscMantenimientoClientes();
+            obj_MC.Dock = DockStyle.Fill;
+            pnlGeneral.Controls.Add(obj_MC);
         }
     }
 }
