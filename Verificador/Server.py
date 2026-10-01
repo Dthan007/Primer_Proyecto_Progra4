@@ -24,7 +24,7 @@ def manejar_cliente(conexion, direccion, conexion_bd):
         except (json.JSONDecodeError, KeyError)as error:
             print("ERROR JSON/KEY: ", error)
             respuesta = {"status": "1"}
-        except Exception:
+        except Exception as error:
             print("ERROR GENERAL:", error)
             respuesta = {"status": "4"}
 
