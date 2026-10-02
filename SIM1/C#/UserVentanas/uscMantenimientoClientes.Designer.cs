@@ -217,7 +217,7 @@
             // 
             btnEnviar.Cursor = Cursors.Hand;
             btnEnviar.Font = new Font("Segoe UI", 12F);
-            btnEnviar.Location = new Point(544, 202);
+            btnEnviar.Location = new Point(544, 180);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(200, 34);
             btnEnviar.TabIndex = 18;
@@ -228,11 +228,12 @@
             // lblResultado
             // 
             lblResultado.AutoSize = true;
-            lblResultado.Location = new Point(174, 221);
+            lblResultado.Font = new Font("Segoe UI", 12F);
+            lblResultado.Location = new Point(544, 228);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(42, 15);
+            lblResultado.Size = new Size(82, 21);
             lblResultado.TabIndex = 19;
-            lblResultado.Text = "_______";
+            lblResultado.Text = "Resultado:";
             // 
             // uscMantenimientoClientes
             // 

@@ -85,3 +85,50 @@ class ConexionBD:
         conexion.commit()
         cursor.close()
         conexion.close()
+
+
+#Funciones para Verificador2
+    def existe_compra(self, numero_compra):
+        conexion = self.obtener_conexion()
+        cursor = conexion.cursor()
+        resultado = cursor.callproc("sp_existe_compra", [numero_compra, 0])
+        existe = resultado[1]
+        cursor.close()
+        conexion.close()
+        return bool(existe)
+
+    def insertar_compra(self, compra, estado):
+        conexion = self.obtener_conexion()
+        cursor = conexion.cursor()
+        cursor.callproc(
+            "sp_insertar_compra",
+            [
+                compra["numero_compra"],
+                compra["identificacion_cliente"],
+                compra["fecha_compra"],
+                compra["total_compra"],
+                compra["tarjeta_cifrada"],
+                compra["vencimiento_cifrado"],
+                compra["cvv_cifrado"],
+                estado,
+            ]
+        )
+        conexion.commit()
+        cursor.close()
+        conexion.close()
+
+    def insertar_detalle_compra(self, numero_compra, producto):
+        conexion = self.obtener_conexion()
+        cursor = conexion.cursor()
+        cursor.callproc(
+            "sp_insertar_detalle_compra",
+            [
+                numero_compra,
+                producto["codigo_producto"],
+                producto["cantidad"],
+            ],
+        )
+        conexion.commit()
+        cursor.close()
+        conexion.close()
+#----------------------------------------------------------------------------------

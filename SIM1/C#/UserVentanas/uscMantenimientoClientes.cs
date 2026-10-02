@@ -49,6 +49,7 @@ namespace Sistema_de_Ventas_y_Distribución
                 nombre = txtNombre.Text,
                 primer_apellido = txtPrimerApellido.Text,
                 segundo_apellido = txtSegundoApellido.Text,
+                telefono = txtTelefono.Text,
                 correo_electronico = txtCorreo.Text,
                 direccion = txtDireccion.Text,
             };

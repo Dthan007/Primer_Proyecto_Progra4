@@ -5,6 +5,7 @@ import threading
 
 from db_verificador import ConexionBD
 from procesador_verificador import procesar_cliente
+from procesador_verificador2 import procesar_compra
 
 CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Config.json")
 
@@ -14,17 +15,22 @@ def cargar_configuracion(path: str) -> dict:
 
 def manejar_cliente(conexion, direccion, conexion_bd):
     with conexion:
-        datos = conexion.recv(4096)
+        datos = conexion.recv(4096) #Recibe la trama de interfaz
         if not datos:
             return
 
         try:
-            trama = json.loads(datos.decode("utf-8"))
-            respuesta = procesar_cliente(trama, conexion_bd)
+            trama = json.loads(datos.decode("utf-8")) #Convierte el JSON a diccionario Python
+            historia = trama.get("historia")
+
+            if historia == "VERIFICADOR2":
+                respuesta = procesar_compra(trama, conexion_bd)
+            else:
+                respuesta = procesar_cliente(trama, conexion_bd) #Recibe los datos de C#
         except (json.JSONDecodeError, KeyError)as error:
             print("ERROR JSON/KEY: ", error)
             respuesta = {"status": "1"}
-        except Exception:
+        except Exception as error:
             print("ERROR GENERAL:", error)
             respuesta = {"status": "4"}
 

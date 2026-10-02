@@ -30,7 +30,7 @@
         {
             mspGeneral = new MenuStrip();
             opcion1ToolStripMenuItem = new ToolStripMenuItem();
-            opcion2ToolStripMenuItem = new ToolStripMenuItem();
+            comprasToolStripMenuItem = new ToolStripMenuItem();
             ingresoYMantenimientoToolStripMenuItem = new ToolStripMenuItem();
             pnlGeneral = new Panel();
             mspGeneral.SuspendLayout();
@@ -38,10 +38,10 @@
             // 
             // mspGeneral
             // 
-            mspGeneral.Items.AddRange(new ToolStripItem[] { opcion1ToolStripMenuItem, opcion2ToolStripMenuItem, ingresoYMantenimientoToolStripMenuItem });
+            mspGeneral.Items.AddRange(new ToolStripItem[] { opcion1ToolStripMenuItem, comprasToolStripMenuItem, ingresoYMantenimientoToolStripMenuItem });
             mspGeneral.Location = new Point(0, 0);
             mspGeneral.Name = "mspGeneral";
-            mspGeneral.Size = new Size(800, 24);
+            mspGeneral.Size = new Size(844, 24);
             mspGeneral.TabIndex = 0;
             mspGeneral.Text = "menuStrip1";
             // 
@@ -52,11 +52,12 @@
             opcion1ToolStripMenuItem.Text = "Mantenimiento de Clientes";
             opcion1ToolStripMenuItem.Click += opcion1ToolStripMenuItem_Click;
             // 
-            // opcion2ToolStripMenuItem
+            // comprasToolStripMenuItem
             // 
-            opcion2ToolStripMenuItem.Name = "opcion2ToolStripMenuItem";
-            opcion2ToolStripMenuItem.Size = new Size(68, 20);
-            opcion2ToolStripMenuItem.Text = "opcion 2 ";
+            comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            comprasToolStripMenuItem.Size = new Size(67, 20);
+            comprasToolStripMenuItem.Text = "Compras";
+            comprasToolStripMenuItem.Click += comprasToolStripMenuItem_Click;
             // 
             // ingresoYMantenimientoToolStripMenuItem
             // 
@@ -69,14 +70,14 @@
             // 
             pnlGeneral.Location = new Point(0, 27);
             pnlGeneral.Name = "pnlGeneral";
-            pnlGeneral.Size = new Size(800, 411);
+            pnlGeneral.Size = new Size(832, 451);
             pnlGeneral.TabIndex = 1;
             // 
             // frmCentral
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(844, 490);
             Controls.Add(pnlGeneral);
             Controls.Add(mspGeneral);
             MainMenuStrip = mspGeneral;
@@ -92,7 +93,7 @@
 
         private MenuStrip mspGeneral;
         private ToolStripMenuItem opcion1ToolStripMenuItem;
-        private ToolStripMenuItem opcion2ToolStripMenuItem;
+        private ToolStripMenuItem comprasToolStripMenuItem;
         private ToolStripMenuItem ingresoYMantenimientoToolStripMenuItem;
         private Panel pnlGeneral;
     }
