@@ -29,7 +29,7 @@
                     limpiarEspacios();
                     
                     string trama = producto.ConstruirTrama(dato);
-                    
+                    string respuesta = producto.ProcesarProducto(dato);
 
                 } else { return; }
 
