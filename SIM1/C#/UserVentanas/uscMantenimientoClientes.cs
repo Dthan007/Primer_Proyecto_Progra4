@@ -55,7 +55,7 @@ namespace Sistema_de_Ventas_y_Distribución
 
             var tramaJson = JsonSerializer.Serialize(trama);
 
-            var conexion = new ConexionSocket(ipVerificador, puertoVerificador);
+            var conexion = new BLL.ConexionSocket(ipVerificador, puertoVerificador);
 
             if (!conexion.Conectar())
             {
