@@ -47,7 +47,7 @@ namespace Sistema_de_Ventas_y_Distribución
         {
             if (streamNW == null)
             {
-                MessageBox.Show("No existe coexion con el servidor.");
+                MessageBox.Show("No existe conexion con el servidor.");
             }
 
             byte[] datos = Encoding.UTF8.GetBytes(mensaje);

@@ -26,5 +26,13 @@ namespace Sistema_de_Ventas_y_Distribución
             obj_MC.Dock = DockStyle.Fill;
             pnlGeneral.Controls.Add(obj_MC);
         }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlGeneral.Controls.Clear();
+            uscCompras obj_C = new uscCompras();
+            obj_C.Dock = DockStyle.Fill;
+            pnlGeneral.Controls.Add(obj_C);
+        }
     }
 }
