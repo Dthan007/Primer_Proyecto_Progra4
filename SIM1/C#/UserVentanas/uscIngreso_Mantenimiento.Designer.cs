@@ -75,7 +75,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 12F);
-            lblNombre.Location = new Point(89, 126);
+            lblNombre.Location = new Point(354, 26);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(71, 21);
             lblNombre.TabIndex = 0;
@@ -85,7 +85,7 @@
             // 
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("Segoe UI", 12F);
-            lblPrecio.Location = new Point(104, 225);
+            lblPrecio.Location = new Point(104, 136);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(56, 21);
             lblPrecio.TabIndex = 0;
@@ -95,44 +95,52 @@
             // 
             txtNoProducto.Font = new Font("Segoe UI", 12F);
             txtNoProducto.Location = new Point(166, 78);
+            txtNoProducto.MaxLength = 10;
             txtNoProducto.Name = "txtNoProducto";
+            txtNoProducto.PlaceholderText = "10 Dígitos";
             txtNoProducto.Size = new Size(158, 29);
             txtNoProducto.TabIndex = 2;
             // 
             // txtNombre
             // 
             txtNombre.Font = new Font("Segoe UI", 12F);
-            txtNombre.Location = new Point(166, 128);
+            txtNombre.Location = new Point(354, 59);
+            txtNombre.MaxLength = 90;
             txtNombre.Multiline = true;
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(158, 71);
+            txtNombre.PlaceholderText = "Escriba aquí";
+            txtNombre.Size = new Size(266, 106);
             txtNombre.TabIndex = 3;
             // 
             // txtPrecio
             // 
             txtPrecio.Font = new Font("Segoe UI", 12F);
-            txtPrecio.Location = new Point(166, 225);
+            txtPrecio.Location = new Point(166, 136);
+            txtPrecio.MaxLength = 8;
             txtPrecio.Name = "txtPrecio";
+            txtPrecio.PlaceholderText = "8 Dígitos (2 decimales)";
             txtPrecio.Size = new Size(158, 29);
             txtPrecio.TabIndex = 4;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(366, 165);
+            btnAceptar.Location = new Point(409, 207);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(96, 34);
             btnAceptar.TabIndex = 5;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(366, 225);
+            btnCancelar.Location = new Point(524, 207);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(96, 34);
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // uscIngreso_Mantenimiento
             // 
@@ -150,7 +158,7 @@
             Controls.Add(lblTipoTransaccion);
             Controls.Add(cmbTipoTransaccion);
             Name = "uscIngreso_Mantenimiento";
-            Size = new Size(520, 303);
+            Size = new Size(669, 303);
             ResumeLayout(false);
             PerformLayout();
         }

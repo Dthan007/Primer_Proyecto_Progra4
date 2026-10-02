@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../BLL/BLL.csproj" Id="b8103f02-6dc9-40ed-9756-11949dc3be83" />
+  <Project Path="../Entity/Entity.csproj" Id="9ca94977-1dec-4d8a-9c02-ac0bb7a8a995" />
+  <Project Path="Sistema de Ventas y Distribución.csproj" />
+</Solution>

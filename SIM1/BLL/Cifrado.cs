@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace Sistema_de_Ventas_y_Distribución
+namespace BLL
 {
-    internal class Cifrado
+    public class Cifrado
     {
         private static readonly byte[] Clave = Encoding.UTF8.GetBytes("ClaveSecretaCUC1ClaveSecretaCuc1");
 
