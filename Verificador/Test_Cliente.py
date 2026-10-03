@@ -23,12 +23,12 @@ if __name__ == "__main__":
         #PRUEBA
     trama_alta = {
         "tipo_transaccion": "agregar",
-        "identificacion": "305260546",
+        "identificacion": "305260512",
         "pais_origen": "CR",
         "nombre": "Andres",
         "primer_apellido": "Sanchez",
         "segundo_apellido": "Brenes",
-        "correo_electronico": "asanchezb@gmail.com",
+        "correo_electronico": "esanchezb@gmail.com",
         "telefono": "87122024",
         "direccion": "Cartago, Costa Rica,"
     }

@@ -6,6 +6,7 @@ import threading
 from db_verificador import ConexionBD
 from procesador_verificador import procesar_cliente
 from procesador_verificador2 import procesar_compra
+from bitacora import iniciar_hilo_bitacora, registrar
 
 CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Config.json")
 
@@ -21,6 +22,7 @@ def manejar_cliente(conexion, direccion, conexion_bd):
 
         try:
             trama = json.loads(datos.decode("utf-8")) #Convierte el JSON a diccionario Python
+            registrar(trama)
             historia = trama.get("historia")
 
             if historia == "VERIFICADOR2":
@@ -54,4 +56,5 @@ def iniciar_servidor(host, port, conexion_bd):
 if __name__ == "__main__":
     configuracion = cargar_configuracion(CONFIG_PATH)
     conexion_bd = ConexionBD(configuracion["mysql"])
+    iniciar_hilo_bitacora("bitacora_verificador.log")
     iniciar_servidor(configuracion["host"], configuracion["port"], conexion_bd)

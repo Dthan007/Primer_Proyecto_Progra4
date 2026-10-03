@@ -25,7 +25,7 @@ if __name__ == "__main__":
  
     trama_compra = {
         "historia": "VERIFICADOR2",
-        "numero_compra": 2526202060,
+        "numero_compra": 2526202099,
         "identificacion_cliente": "305260546",
         "fecha_compra": date.today().isoformat(),
         "total_compra": 15000.50,

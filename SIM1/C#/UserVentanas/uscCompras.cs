@@ -55,7 +55,7 @@ namespace Sistema_de_Ventas_y_Distribución
                 identificacion_cliente = txtIdentificacionCliente.Text,
                 fecha_compra = DateTime.Today.ToString("yyyy-MM-dd"),
                 total_compra = txtTotalCompra.Text,
-                tarjeta_cifrada = BLL.Cifrado.Cifrar(txtFechaVencimiento.Text),
+                tarjeta_cifrada = Cifrado.Cifrar(txtFechaVencimiento.Text),
                 vencimiento_cifrado = Cifrado.Cifrar(txtFechaVencimiento.Text),
                 cvv_cifrado = Cifrado.Cifrar(txtCvv.Text),
                 productos = productos
