@@ -1,3 +1,5 @@
+package BLL;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -30,13 +32,15 @@ public class Servidor {
         }
     }
 
-    private static void atenderCliente(Socket cliente) {
-
+    private static void atenderCliente(Socket cliente) 
+    {
         try (
             Socket socket = cliente;
             InputStream entrada = socket.getInputStream();
             OutputStream salida = socket.getOutputStream()
         ) {
+
+            ProductoBLL productoBLL = new ProductoBLL();
 
             byte[] buffer = new byte[1024];
 
@@ -58,7 +62,22 @@ public class Servidor {
 
                 System.out.println("Mensaje recibido: " + mensaje);
 
-                String respuesta = "Hola desde el servidor Java";
+                System.out.println("PASO 1: voy a llamar a ProductoBLL");
+
+                System.out.println("PASO 2: ProductoBLL creado");
+
+                boolean resultado = productoBLL.procesoTrama(mensaje);
+
+                System.out.println("PASO 3: ProductoBLL terminó");
+                System.out.println("Resultado: " + resultado);
+
+                String respuesta;
+
+                if (resultado) {
+                    respuesta = "OK: Producto guardado";
+                } else {
+                    respuesta = "ERROR: No se pudo guardar el producto";
+                }
 
                 byte[] datosRespuesta =
                     respuesta.getBytes(StandardCharsets.UTF_8);

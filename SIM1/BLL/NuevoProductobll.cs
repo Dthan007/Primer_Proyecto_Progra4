@@ -11,7 +11,7 @@ namespace BLL
                 producto.transaccion + "|" +
                 producto.producto + "|" +
                 producto.nombre + "|" +
-                producto.precio;
+                producto.precio.ToString(System.Globalization.CultureInfo.InvariantCulture);
 
             return trama;
         }
