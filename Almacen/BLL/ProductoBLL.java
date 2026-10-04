@@ -7,21 +7,21 @@ public class ProductoBLL
 {
     private ProductoDAL productoDAL = new ProductoDAL();
 
-    public boolean procesoTrama(String trama)
+    public String procesoTrama(String trama)
     {
         String[] datos = trama.split("\\|");
 
         if (datos.length != 5)
         {
-            return false;
+            return "La información recibida no es válida";
         }
 
         if (!datos[0].equals("PRODUCTO"))
         {
-            return false;
+            return "Operación no válida";
         }
 
-        try 
+        try
         {
             int transaccion = Integer.parseInt(datos[1]);
             String producto = datos[2];
@@ -29,16 +29,28 @@ public class ProductoBLL
             double precio = Double.parseDouble(datos[4]);
 
             NuevoProducto nuevoProducto =
-                new NuevoProducto(transaccion, producto, nombre, precio);
+                new NuevoProducto(
+                    transaccion,
+                    producto,
+                    nombre,
+                    precio
+                );
 
-            // AQUÍ SE LLAMA A ProductoDAL
-            return productoDAL.guardarProducto(nuevoProducto);
+            boolean resultado =
+                productoDAL.guardarProducto(nuevoProducto);
 
-
+            if (resultado)
+            {
+                return "EXITOSO";
+            }
+            else
+            {
+                return "ERROR";
+            }
         }
-        catch (NumberFormatException e) 
+        catch (NumberFormatException e)
         {
-            return false;
+            return "Los datos del producto no son válidos";
         }
     }
 }

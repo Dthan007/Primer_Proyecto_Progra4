@@ -66,22 +66,7 @@ public class Servidor {
 
                 Bitacora.registrar(mensaje); //Almacen 5
 
-                System.out.println("PASO 1: voy a llamar a ProductoBLL");
-
-                System.out.println("PASO 2: ProductoBLL creado");
-
-                boolean resultado = productoBLL.procesoTrama(mensaje);
-
-                System.out.println("PASO 3: ProductoBLL terminó");
-                System.out.println("Resultado: " + resultado);
-
-                String respuesta;
-
-                if (resultado) {
-                    respuesta = "OK: Producto guardado";
-                } else {
-                    respuesta = "ERROR: No se pudo guardar el producto";
-                }
+                String respuesta = productoBLL.procesoTrama(mensaje);
 
                 byte[] datosRespuesta =
                     respuesta.getBytes(StandardCharsets.UTF_8);

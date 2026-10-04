@@ -15,7 +15,7 @@ namespace Sistema_de_Ventas_y_Distribución
         private void ingresoYMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnlGeneral.Controls.Clear();
-            uscIngreso_Mantenimiento obj_IM = new uscIngreso_Mantenimiento();
+            uscIngreso_Producto obj_IM = new uscIngreso_Producto();
             obj_IM.Dock = DockStyle.Fill;
             pnlGeneral.Controls.Add(obj_IM);
 

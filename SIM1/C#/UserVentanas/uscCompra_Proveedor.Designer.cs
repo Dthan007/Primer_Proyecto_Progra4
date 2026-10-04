@@ -36,13 +36,12 @@
             lblFechaCompra = new Label();
             txtJuridica = new TextBox();
             lblIDjuridica = new Label();
-            txtProductos = new ComboBox();
+            cmbProductos = new ComboBox();
             lblProductos = new Label();
             txtNoProducto = new TextBox();
             lblNoProducto = new Label();
             txtCantidad = new TextBox();
             lblCantidad = new Label();
-            btnCancelar = new Button();
             btnAceptar = new Button();
             SuspendLayout();
             // 
@@ -121,15 +120,15 @@
             lblIDjuridica.TabIndex = 0;
             lblIDjuridica.Text = "Cédula Jurídica:";
             // 
-            // txtProductos
+            // cmbProductos
             // 
-            txtProductos.DropDownStyle = ComboBoxStyle.DropDownList;
-            txtProductos.Font = new Font("Segoe UI", 12F);
-            txtProductos.FormattingEnabled = true;
-            txtProductos.Location = new Point(532, 34);
-            txtProductos.Name = "txtProductos";
-            txtProductos.Size = new Size(176, 29);
-            txtProductos.TabIndex = 9;
+            cmbProductos.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbProductos.Font = new Font("Segoe UI", 12F);
+            cmbProductos.FormattingEnabled = true;
+            cmbProductos.Location = new Point(532, 34);
+            cmbProductos.Name = "cmbProductos";
+            cmbProductos.Size = new Size(176, 29);
+            cmbProductos.TabIndex = 9;
             // 
             // lblProductos
             // 
@@ -177,35 +176,26 @@
             lblCantidad.TabIndex = 0;
             lblCantidad.Text = "Cantidad: ";
             // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(612, 226);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(96, 34);
-            btnCancelar.TabIndex = 17;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(510, 226);
+            btnAceptar.Location = new Point(532, 211);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(96, 34);
             btnAceptar.TabIndex = 16;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // uscCompra_Proveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtCantidad);
             Controls.Add(lblCantidad);
             Controls.Add(txtNoProducto);
             Controls.Add(lblNoProducto);
-            Controls.Add(txtProductos);
+            Controls.Add(cmbProductos);
             Controls.Add(lblProductos);
             Controls.Add(txtJuridica);
             Controls.Add(lblIDjuridica);
@@ -231,13 +221,12 @@
         private Label lblFechaCompra;
         private TextBox txtJuridica;
         private Label lblIDjuridica;
-        private ComboBox txtProductos;
+        private ComboBox cmbProductos;
         private Label lblProductos;
         private TextBox txtNoProducto;
         private Label lblNoProducto;
         private TextBox txtCantidad;
         private Label lblCantidad;
-        private Button btnCancelar;
         private Button btnAceptar;
     }
 }

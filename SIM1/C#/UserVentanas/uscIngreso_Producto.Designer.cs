@@ -1,6 +1,6 @@
 ﻿namespace Sistema_de_Ventas_y_Distribución
 {
-    partial class uscIngreso_Mantenimiento
+    partial class uscIngreso_Producto
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -37,7 +37,6 @@
             txtNombre = new TextBox();
             txtPrecio = new TextBox();
             btnAceptar = new Button();
-            btnCancelar = new Button();
             SuspendLayout();
             // 
             // cmbTipoTransaccion
@@ -132,22 +131,11 @@
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
             // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(524, 207);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(96, 34);
-            btnCancelar.TabIndex = 6;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
-            // 
-            // uscIngreso_Mantenimiento
+            // uscIngreso_Producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtPrecio);
             Controls.Add(txtNombre);
@@ -157,7 +145,7 @@
             Controls.Add(lblNoProducto);
             Controls.Add(lblTipoTransaccion);
             Controls.Add(cmbTipoTransaccion);
-            Name = "uscIngreso_Mantenimiento";
+            Name = "uscIngreso_Producto";
             Size = new Size(669, 303);
             ResumeLayout(false);
             PerformLayout();
@@ -174,6 +162,5 @@
         private TextBox txtNombre;
         private TextBox txtPrecio;
         private Button btnAceptar;
-        private Button btnCancelar;
     }
 }
