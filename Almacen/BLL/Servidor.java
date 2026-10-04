@@ -17,6 +17,8 @@ public class Servidor {
 
             System.out.println("Servidor iniciado en el puerto " + PUERTO);
 
+            Bitacora.iniciarHilo("bitacora_almacen.log"); //Almacen 5
+
             while (true) {
 
                 Socket cliente = servidor.accept();
@@ -61,6 +63,8 @@ public class Servidor {
                 );
 
                 System.out.println("Mensaje recibido: " + mensaje);
+
+                Bitacora.registrar(mensaje); //Almacen 5
 
                 System.out.println("PASO 1: voy a llamar a ProductoBLL");
 
