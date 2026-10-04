@@ -28,168 +28,193 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            comboBox2 = new ComboBox();
-            label5 = new Label();
-            textBox4 = new TextBox();
-            label6 = new Label();
-            textBox5 = new TextBox();
-            label7 = new Label();
+            lblTipoTrans = new Label();
+            cmbTransaccion = new ComboBox();
+            lblNumIngreso = new Label();
+            txtIngreso = new TextBox();
+            txtCompra = new TextBox();
+            lblFechaCompra = new Label();
+            txtJuridica = new TextBox();
+            lblIDjuridica = new Label();
+            txtProductos = new ComboBox();
+            lblProductos = new Label();
+            txtNoProducto = new TextBox();
+            lblNoProducto = new Label();
+            txtCantidad = new TextBox();
+            lblCantidad = new Label();
+            btnCancelar = new Button();
+            btnAceptar = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblTipoTrans
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(40, 34);
-            label1.Name = "label1";
-            label1.Size = new Size(128, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Tipo Transacción:";
+            lblTipoTrans.AutoSize = true;
+            lblTipoTrans.Font = new Font("Segoe UI", 12F);
+            lblTipoTrans.Location = new Point(40, 34);
+            lblTipoTrans.Name = "lblTipoTrans";
+            lblTipoTrans.Size = new Size(128, 21);
+            lblTipoTrans.TabIndex = 0;
+            lblTipoTrans.Text = "Tipo Transacción:";
             // 
-            // comboBox1
+            // cmbTransaccion
             // 
-            comboBox1.Font = new Font("Segoe UI", 12F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(174, 34);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(176, 29);
-            comboBox1.TabIndex = 1;
+            cmbTransaccion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTransaccion.Font = new Font("Segoe UI", 12F);
+            cmbTransaccion.FormattingEnabled = true;
+            cmbTransaccion.Items.AddRange(new object[] { "Compras" });
+            cmbTransaccion.Location = new Point(174, 34);
+            cmbTransaccion.Name = "cmbTransaccion";
+            cmbTransaccion.Size = new Size(176, 29);
+            cmbTransaccion.TabIndex = 1;
             // 
-            // label2
+            // lblNumIngreso
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(16, 88);
-            label2.Name = "label2";
-            label2.Size = new Size(152, 21);
-            label2.TabIndex = 2;
-            label2.Text = "Número de Ingreso: ";
+            lblNumIngreso.AutoSize = true;
+            lblNumIngreso.Font = new Font("Segoe UI", 12F);
+            lblNumIngreso.Location = new Point(16, 88);
+            lblNumIngreso.Name = "lblNumIngreso";
+            lblNumIngreso.Size = new Size(152, 21);
+            lblNumIngreso.TabIndex = 0;
+            lblNumIngreso.Text = "Número de Ingreso: ";
             // 
-            // textBox1
+            // txtIngreso
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(174, 88);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(176, 29);
-            textBox1.TabIndex = 3;
+            txtIngreso.Font = new Font("Segoe UI", 12F);
+            txtIngreso.Location = new Point(174, 88);
+            txtIngreso.Name = "txtIngreso";
+            txtIngreso.Size = new Size(176, 29);
+            txtIngreso.TabIndex = 3;
             // 
-            // textBox2
+            // txtCompra
             // 
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(174, 147);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(176, 29);
-            textBox2.TabIndex = 5;
+            txtCompra.Font = new Font("Segoe UI", 12F);
+            txtCompra.Location = new Point(174, 147);
+            txtCompra.Name = "txtCompra";
+            txtCompra.Size = new Size(176, 29);
+            txtCompra.TabIndex = 5;
             // 
-            // label3
+            // lblFechaCompra
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(37, 147);
-            label3.Name = "label3";
-            label3.Size = new Size(131, 21);
-            label3.TabIndex = 4;
-            label3.Text = "Fecha de compra:";
+            lblFechaCompra.AutoSize = true;
+            lblFechaCompra.Font = new Font("Segoe UI", 12F);
+            lblFechaCompra.Location = new Point(37, 147);
+            lblFechaCompra.Name = "lblFechaCompra";
+            lblFechaCompra.Size = new Size(131, 21);
+            lblFechaCompra.TabIndex = 0;
+            lblFechaCompra.Text = "Fecha de compra:";
             // 
-            // textBox3
+            // txtJuridica
             // 
-            textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.Location = new Point(174, 198);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(176, 29);
-            textBox3.TabIndex = 7;
+            txtJuridica.Font = new Font("Segoe UI", 12F);
+            txtJuridica.Location = new Point(174, 198);
+            txtJuridica.Name = "txtJuridica";
+            txtJuridica.Size = new Size(176, 29);
+            txtJuridica.TabIndex = 7;
             // 
-            // label4
+            // lblIDjuridica
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(50, 198);
-            label4.Name = "label4";
-            label4.Size = new Size(118, 21);
-            label4.TabIndex = 6;
-            label4.Text = "Cédula Jurídica:";
+            lblIDjuridica.AutoSize = true;
+            lblIDjuridica.Font = new Font("Segoe UI", 12F);
+            lblIDjuridica.Location = new Point(50, 198);
+            lblIDjuridica.Name = "lblIDjuridica";
+            lblIDjuridica.Size = new Size(118, 21);
+            lblIDjuridica.TabIndex = 0;
+            lblIDjuridica.Text = "Cédula Jurídica:";
             // 
-            // comboBox2
+            // txtProductos
             // 
-            comboBox2.Font = new Font("Segoe UI", 12F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(532, 34);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(176, 29);
-            comboBox2.TabIndex = 9;
+            txtProductos.DropDownStyle = ComboBoxStyle.DropDownList;
+            txtProductos.Font = new Font("Segoe UI", 12F);
+            txtProductos.FormattingEnabled = true;
+            txtProductos.Location = new Point(532, 34);
+            txtProductos.Name = "txtProductos";
+            txtProductos.Size = new Size(176, 29);
+            txtProductos.TabIndex = 9;
             // 
-            // label5
+            // lblProductos
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(382, 34);
-            label5.Name = "label5";
-            label5.Size = new Size(144, 21);
-            label5.TabIndex = 8;
-            label5.Text = "Lista de productos: ";
+            lblProductos.AutoSize = true;
+            lblProductos.Font = new Font("Segoe UI", 12F);
+            lblProductos.Location = new Point(382, 34);
+            lblProductos.Name = "lblProductos";
+            lblProductos.Size = new Size(144, 21);
+            lblProductos.TabIndex = 0;
+            lblProductos.Text = "Lista de productos: ";
             // 
-            // textBox4
+            // txtNoProducto
             // 
-            textBox4.Font = new Font("Segoe UI", 12F);
-            textBox4.Location = new Point(532, 96);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(176, 29);
-            textBox4.TabIndex = 11;
+            txtNoProducto.Font = new Font("Segoe UI", 12F);
+            txtNoProducto.Location = new Point(532, 96);
+            txtNoProducto.Name = "txtNoProducto";
+            txtNoProducto.Size = new Size(176, 29);
+            txtNoProducto.TabIndex = 11;
             // 
-            // label6
+            // lblNoProducto
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(421, 96);
-            label6.Name = "label6";
-            label6.Size = new Size(105, 21);
-            label6.TabIndex = 10;
-            label6.Text = "No Producto: ";
+            lblNoProducto.AutoSize = true;
+            lblNoProducto.Font = new Font("Segoe UI", 12F);
+            lblNoProducto.Location = new Point(421, 96);
+            lblNoProducto.Name = "lblNoProducto";
+            lblNoProducto.Size = new Size(105, 21);
+            lblNoProducto.TabIndex = 0;
+            lblNoProducto.Text = "No Producto: ";
             // 
-            // textBox5
+            // txtCantidad
             // 
-            textBox5.Font = new Font("Segoe UI", 12F);
-            textBox5.Location = new Point(532, 153);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(176, 29);
-            textBox5.TabIndex = 13;
+            txtCantidad.Font = new Font("Segoe UI", 12F);
+            txtCantidad.Location = new Point(532, 153);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(176, 29);
+            txtCantidad.TabIndex = 13;
             // 
-            // label7
+            // lblCantidad
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(447, 153);
-            label7.Name = "label7";
-            label7.Size = new Size(79, 21);
-            label7.TabIndex = 12;
-            label7.Text = "Cantidad: ";
+            lblCantidad.AutoSize = true;
+            lblCantidad.Font = new Font("Segoe UI", 12F);
+            lblCantidad.Location = new Point(447, 153);
+            lblCantidad.Name = "lblCantidad";
+            lblCantidad.Size = new Size(79, 21);
+            lblCantidad.TabIndex = 0;
+            lblCantidad.Text = "Cantidad: ";
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(612, 226);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(96, 34);
+            btnCancelar.TabIndex = 17;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnAceptar
+            // 
+            btnAceptar.Location = new Point(510, 226);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(96, 34);
+            btnAceptar.TabIndex = 16;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = true;
             // 
             // uscCompra_Proveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(textBox5);
-            Controls.Add(label7);
-            Controls.Add(textBox4);
-            Controls.Add(label6);
-            Controls.Add(comboBox2);
-            Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(label4);
-            Controls.Add(textBox2);
-            Controls.Add(label3);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
-            Controls.Add(comboBox1);
-            Controls.Add(label1);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnAceptar);
+            Controls.Add(txtCantidad);
+            Controls.Add(lblCantidad);
+            Controls.Add(txtNoProducto);
+            Controls.Add(lblNoProducto);
+            Controls.Add(txtProductos);
+            Controls.Add(lblProductos);
+            Controls.Add(txtJuridica);
+            Controls.Add(lblIDjuridica);
+            Controls.Add(txtCompra);
+            Controls.Add(lblFechaCompra);
+            Controls.Add(txtIngreso);
+            Controls.Add(lblNumIngreso);
+            Controls.Add(cmbTransaccion);
+            Controls.Add(lblTipoTrans);
             Name = "uscCompra_Proveedor";
             Size = new Size(822, 514);
             ResumeLayout(false);
@@ -198,19 +223,21 @@
 
         #endregion
 
-        private Label label1;
-        private ComboBox comboBox1;
-        private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label3;
-        private TextBox textBox3;
-        private Label label4;
-        private ComboBox comboBox2;
-        private Label label5;
-        private TextBox textBox4;
-        private Label label6;
-        private TextBox textBox5;
-        private Label label7;
+        private Label lblTipoTrans;
+        private ComboBox cmbTransaccion;
+        private Label lblNumIngreso;
+        private TextBox txtIngreso;
+        private TextBox txtCompra;
+        private Label lblFechaCompra;
+        private TextBox txtJuridica;
+        private Label lblIDjuridica;
+        private ComboBox txtProductos;
+        private Label lblProductos;
+        private TextBox txtNoProducto;
+        private Label lblNoProducto;
+        private TextBox txtCantidad;
+        private Label lblCantidad;
+        private Button btnCancelar;
+        private Button btnAceptar;
     }
 }
