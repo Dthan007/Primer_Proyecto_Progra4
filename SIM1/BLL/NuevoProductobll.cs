@@ -1,6 +1,4 @@
-﻿
-
-namespace BLL
+﻿namespace BLL
 {
     public class NuevoProductobll
     {

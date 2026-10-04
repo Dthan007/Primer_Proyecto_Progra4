@@ -1,3 +1,5 @@
+using Sistema_de_Ventas_y_Distribución.UserVentanas;
+
 namespace Sistema_de_Ventas_y_Distribución
 {
     public partial class frmCentral : Form
@@ -33,6 +35,23 @@ namespace Sistema_de_Ventas_y_Distribución
             uscCompras obj_C = new uscCompras();
             obj_C.Dock = DockStyle.Fill;
             pnlGeneral.Controls.Add(obj_C);
+        }
+
+        private void nuevoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlGeneral.Controls.Clear();
+            uscIngreso_Proveedor obj_IP = new uscIngreso_Proveedor();
+            obj_IP.Dock = DockStyle.Fill;
+            pnlGeneral.Controls.Add(obj_IP);
+        }
+
+        private void compraProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlGeneral.Controls.Clear();
+            uscCompra_Proveedor obj_CP = new uscCompra_Proveedor();
+            obj_CP.Dock = DockStyle.Fill;
+            pnlGeneral.Controls.Add(obj_CP);
+
         }
     }
 }

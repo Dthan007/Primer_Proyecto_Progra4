@@ -32,13 +32,15 @@
             opcion1ToolStripMenuItem = new ToolStripMenuItem();
             comprasToolStripMenuItem = new ToolStripMenuItem();
             ingresoYMantenimientoToolStripMenuItem = new ToolStripMenuItem();
+            nuevoProveedorToolStripMenuItem = new ToolStripMenuItem();
             pnlGeneral = new Panel();
+            compraProveedorToolStripMenuItem = new ToolStripMenuItem();
             mspGeneral.SuspendLayout();
             SuspendLayout();
             // 
             // mspGeneral
             // 
-            mspGeneral.Items.AddRange(new ToolStripItem[] { opcion1ToolStripMenuItem, comprasToolStripMenuItem, ingresoYMantenimientoToolStripMenuItem });
+            mspGeneral.Items.AddRange(new ToolStripItem[] { opcion1ToolStripMenuItem, comprasToolStripMenuItem, ingresoYMantenimientoToolStripMenuItem, nuevoProveedorToolStripMenuItem, compraProveedorToolStripMenuItem });
             mspGeneral.Location = new Point(0, 0);
             mspGeneral.Name = "mspGeneral";
             mspGeneral.Size = new Size(844, 24);
@@ -62,9 +64,16 @@
             // ingresoYMantenimientoToolStripMenuItem
             // 
             ingresoYMantenimientoToolStripMenuItem.Name = "ingresoYMantenimientoToolStripMenuItem";
-            ingresoYMantenimientoToolStripMenuItem.Size = new Size(152, 20);
-            ingresoYMantenimientoToolStripMenuItem.Text = "Ingreso y Mantenimiento";
+            ingresoYMantenimientoToolStripMenuItem.Size = new Size(106, 20);
+            ingresoYMantenimientoToolStripMenuItem.Text = "Nuevo Producto";
             ingresoYMantenimientoToolStripMenuItem.Click += ingresoYMantenimientoToolStripMenuItem_Click;
+            // 
+            // nuevoProveedorToolStripMenuItem
+            // 
+            nuevoProveedorToolStripMenuItem.Name = "nuevoProveedorToolStripMenuItem";
+            nuevoProveedorToolStripMenuItem.Size = new Size(111, 20);
+            nuevoProveedorToolStripMenuItem.Text = "Nuevo Proveedor";
+            nuevoProveedorToolStripMenuItem.Click += nuevoProveedorToolStripMenuItem_Click;
             // 
             // pnlGeneral
             // 
@@ -72,6 +81,13 @@
             pnlGeneral.Name = "pnlGeneral";
             pnlGeneral.Size = new Size(832, 451);
             pnlGeneral.TabIndex = 1;
+            // 
+            // compraProveedorToolStripMenuItem
+            // 
+            compraProveedorToolStripMenuItem.Name = "compraProveedorToolStripMenuItem";
+            compraProveedorToolStripMenuItem.Size = new Size(119, 20);
+            compraProveedorToolStripMenuItem.Text = "Compra Proveedor";
+            compraProveedorToolStripMenuItem.Click += compraProveedorToolStripMenuItem_Click;
             // 
             // frmCentral
             // 
@@ -96,5 +112,7 @@
         private ToolStripMenuItem comprasToolStripMenuItem;
         private ToolStripMenuItem ingresoYMantenimientoToolStripMenuItem;
         private Panel pnlGeneral;
+        private ToolStripMenuItem nuevoProveedorToolStripMenuItem;
+        private ToolStripMenuItem compraProveedorToolStripMenuItem;
     }
 }
