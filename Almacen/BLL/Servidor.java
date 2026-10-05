@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import Bitacora.BitacoraService;
 
 public class Servidor {
 
@@ -18,14 +19,15 @@ public class Servidor {
             System.out.println("Servidor iniciado en el puerto " + PUERTO);
 
             Bitacora.iniciarHilo("bitacora_almacen.log"); //Almacen 5
-
+            BitacoraService bitacoraService = new BitacoraService();
+            
             while (true) {
 
                 Socket cliente = servidor.accept();
 
                 System.out.println("Cliente conectado");
 
-                atenderCliente(cliente);
+                atenderCliente(cliente, bitacoraService);
             }
 
         } catch (IOException ex) {
@@ -34,7 +36,7 @@ public class Servidor {
         }
     }
 
-    private static void atenderCliente(Socket cliente) 
+    private static void atenderCliente(Socket cliente, BitacoraService bitacoraService) 
     {
         try (
             Socket socket = cliente;
@@ -65,7 +67,9 @@ public class Servidor {
                 );
 
                 System.out.println("Mensaje recibido: " + mensaje);
-
+                
+                bitacoraService.registrar(mensaje);
+                
                 Bitacora.registrar(mensaje);
 
                 String[] datos = mensaje.split("\\|", -1);
