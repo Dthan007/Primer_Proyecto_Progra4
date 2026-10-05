@@ -6,51 +6,48 @@ import DAL.ProductoDAL;
 public class ProductoBLL 
 {
     private ProductoDAL productoDAL = new ProductoDAL();
+    private ProductoValidacion validacion = new ProductoValidacion();
 
     public String procesoTrama(String trama)
     {
-        String[] datos = trama.split("\\|");
+        String[] datos = trama.split("\\|", -1);
 
-        if (datos.length != 5)
-        {
-            return "La información recibida no es válida";
-        }
+        String resultadoValidacion = validacion.validar(datos);
 
-        if (!datos[0].equals("PRODUCTO"))
+        if (!resultadoValidacion.equals("OK"))
         {
-            return "Operación no válida";
+            return resultadoValidacion;
         }
 
         try
         {
             int transaccion = Integer.parseInt(datos[1]);
-            String producto = datos[2];
-            String nombre = datos[3];
-            double precio = Double.parseDouble(datos[4]);
 
             NuevoProducto nuevoProducto =
                 new NuevoProducto(
                     transaccion,
-                    producto,
-                    nombre,
-                    precio
+                    datos[2],
+                    datos[3],
+                    Double.parseDouble(datos[4]) / 100
                 );
 
-            boolean resultado =
-                productoDAL.guardarProducto(nuevoProducto);
+            if (transaccion == 0)
+            {
+                return productoDAL.guardarProducto(nuevoProducto);
+            }
 
-            if (resultado)
+            if (transaccion == 1)
             {
-                return "EXITOSO";
+                return productoDAL.modificarProducto(nuevoProducto);
             }
-            else
-            {
-                return "ERROR";
-            }
+
+            return "ERROR: Transacción no válida";
         }
         catch (NumberFormatException e)
         {
-            return "Los datos del producto no son válidos";
+            return "ERROR: Los datos numéricos no son válidos";
         }
     }
+
+    
 }

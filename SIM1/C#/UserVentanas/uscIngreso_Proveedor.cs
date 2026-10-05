@@ -12,14 +12,14 @@ namespace Sistema_de_Ventas_y_Distribución.UserVentanas
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string trama =
-                "PROVEEDOR" +
-                (cmbTipoTransaccion.SelectedItem?.ToString() ?? "") + "|" +
+                "PROVEEDOR|" +
+                cmbTipoTransaccion.SelectedIndex + "|" +
                 txtIDjuridica.Text + "|" +
                 txtNombre.Text + "|" +
-                txtTelefono.Text + "|" +
                 txtNomContacto.Text + "|" +
+                txtTelefono.Text + "|" +
                 txtCorreo.Text + "|" +
-                (cmbEstado.SelectedItem?.ToString() ?? "");
+                cmbEstado.SelectedIndex;
 
             EnviarConsulta proveedorBLL = new EnviarConsulta();
             string respuesta = proveedorBLL.ProcesarElemento(trama);

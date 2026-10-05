@@ -43,6 +43,8 @@ public class Servidor {
         ) {
 
             ProductoBLL productoBLL = new ProductoBLL();
+            ProveedorBLL proveedorBLL = new ProveedorBLL();
+            CompraBLL compraBLL = new CompraBLL();
 
             byte[] buffer = new byte[1024];
 
@@ -64,9 +66,29 @@ public class Servidor {
 
                 System.out.println("Mensaje recibido: " + mensaje);
 
-                Bitacora.registrar(mensaje); //Almacen 5
+                Bitacora.registrar(mensaje);
 
-                String respuesta = productoBLL.procesoTrama(mensaje);
+                String[] datos = mensaje.split("\\|", -1);
+                System.out.println("TIPO DE TRAMA: [" + datos[0] + "]");
+
+                String respuesta;
+
+                if (datos[0].equals("PRODUCTO"))
+                {
+                    respuesta = productoBLL.procesoTrama(mensaje);
+                }
+                else if (datos[0].equals("PROVEEDOR"))
+                {
+                    respuesta = proveedorBLL.procesoTrama(mensaje);
+                }
+                else if (datos[0].equals("COMPRA"))
+                {
+                    respuesta = compraBLL.procesoTrama(mensaje);
+                }
+                else
+                {
+                    respuesta = "ERROR: Tipo de trama no reconocido";
+                }
 
                 byte[] datosRespuesta =
                     respuesta.getBytes(StandardCharsets.UTF_8);

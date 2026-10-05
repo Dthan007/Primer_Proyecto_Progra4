@@ -12,8 +12,8 @@ namespace Sistema_de_Ventas_y_Distribución
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string trama =
-                "PRODUCTO" +
-                (cmbTipoTransaccion.SelectedItem?.ToString() ?? "") + "|"+
+                "PRODUCTO|" +
+                cmbTipoTransaccion.SelectedIndex + "|" +
                 txtNoProducto.Text + "|" +
                 txtNombre.Text + "|" +
                 txtPrecio.Text;

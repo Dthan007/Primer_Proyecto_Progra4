@@ -44,7 +44,7 @@
             cmbTipoTransaccion.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipoTransaccion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbTipoTransaccion.FormattingEnabled = true;
-            cmbTipoTransaccion.Items.AddRange(new object[] { "1: Ingreso", "2: Modificación" });
+            cmbTipoTransaccion.Items.AddRange(new object[] { "Ingreso", "Modificación" });
             cmbTipoTransaccion.Location = new Point(166, 28);
             cmbTipoTransaccion.Name = "cmbTipoTransaccion";
             cmbTipoTransaccion.Size = new Size(158, 29);

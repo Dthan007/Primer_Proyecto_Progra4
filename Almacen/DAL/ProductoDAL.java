@@ -4,44 +4,75 @@ import Entity.NuevoProducto;
 import java.sql.Connection;
 import java.sql.CallableStatement;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 
-public class ProductoDAL {
-
+public class ProductoDAL
+{
     private final String url =
-        "jdbc:sqlserver://localhost:1433;databaseName=Almacen;encrypt=false;trustServerCertificate=true;integratedSecurity=true";
+        "jdbc:sqlserver://localhost:1433;" +
+        "databaseName=Almacen;" +
+        "encrypt=false;" +
+        "trustServerCertificate=true;" +
+        "integratedSecurity=true";
 
-    
-
-    public boolean guardarProducto(NuevoProducto producto) {
-
+    public String guardarProducto(NuevoProducto producto)
+    {
         String sql = "{CALL SP_InsertarNuevoProducto(?, ?, ?, ?)}";
 
-        try (
-            Connection conexion = DriverManager.getConnection(
-                url
-            );
-
-            CallableStatement comando =
-                conexion.prepareCall(sql)
-        ) {
-
-            comando.setInt(1, producto.getTransaccion());
-            comando.setString(2, producto.getProducto());
+        try
+        (
+            Connection conexion = DriverManager.getConnection(url);
+            CallableStatement comando = conexion.prepareCall(sql)
+        )
+        {
+            comando.setString(1, producto.getProducto());
+            comando.setInt(2, producto.getTransaccion());
             comando.setString(3, producto.getNombre());
             comando.setDouble(4, producto.getPrecio());
 
-            comando.execute();
-            System.out.println("Filas afectadas: " + comando.getUpdateCount());
+            ResultSet resultado = comando.executeQuery();
 
-            return true;
+            if (resultado.next())
+            {
+                return resultado.getString("Resultado");
+            }
 
-        } catch (Exception e) {
+            return "ERROR";
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error al guardar producto: " + e.getMessage());
+            return "ERROR";
+        }
+    }
 
-            System.out.println(
-                "Error al guardar producto: " + e.getMessage()
-            );
+    public String modificarProducto(NuevoProducto producto)
+    {
+        String sql = "{CALL SP_ModificarProducto(?, ?, ?)}";
 
-            return false;
+        try
+        (
+            Connection conexion = DriverManager.getConnection(url);
+            CallableStatement comando = conexion.prepareCall(sql)
+        )
+        {
+            comando.setString(1, producto.getProducto());
+            comando.setString(2, producto.getNombre());
+            comando.setDouble(3, producto.getPrecio());
+
+            ResultSet resultado = comando.executeQuery();
+
+            if (resultado.next())
+            {
+                return resultado.getString("Resultado");
+            }
+
+            return "ERROR";
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error al modificar producto: " + e.getMessage());
+            return "ERROR";
         }
     }
 }
