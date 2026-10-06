@@ -1,6 +1,6 @@
 ﻿namespace Sistema_de_Ventas_y_Distribución.UserVentanas
 {
-    partial class uscCompra_Proveedor
+    partial class uscCompra_Producto
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

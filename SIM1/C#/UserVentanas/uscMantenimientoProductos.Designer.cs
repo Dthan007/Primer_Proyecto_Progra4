@@ -1,6 +1,6 @@
 ﻿namespace Sistema_de_Ventas_y_Distribución
 {
-    partial class uscIngreso_Producto
+    partial class uscMantenimientoProductos
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

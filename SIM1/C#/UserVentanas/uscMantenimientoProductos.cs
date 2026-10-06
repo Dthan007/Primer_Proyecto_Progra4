@@ -2,9 +2,9 @@
 
 namespace Sistema_de_Ventas_y_Distribución
 {
-    public partial class uscIngreso_Producto : UserControl
+    public partial class uscMantenimientoProductos : UserControl
     {
-        public uscIngreso_Producto()
+        public uscMantenimientoProductos()
         {
             InitializeComponent();
         }

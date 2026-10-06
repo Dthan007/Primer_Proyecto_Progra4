@@ -2,9 +2,9 @@
 
 namespace Sistema_de_Ventas_y_Distribución.UserVentanas
 {
-    public partial class uscCompra_Proveedor : UserControl
+    public partial class uscCompra_Producto : UserControl
     {
-        public uscCompra_Proveedor()
+        public uscCompra_Producto()
         {
             InitializeComponent();
         }
@@ -13,7 +13,7 @@ namespace Sistema_de_Ventas_y_Distribución.UserVentanas
         {
             string trama =
                 "COMPRA|" +
-                "5|" +
+                cmbProductos.SelectedIndex + "|" +
                 txtIngreso.Text + "|" +
                 txtCompra.Text + "|" +
                 txtJuridica.Text + "|" +

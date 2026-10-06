@@ -2,9 +2,9 @@
 
 namespace Sistema_de_Ventas_y_Distribución.UserVentanas
 {
-    public partial class uscIngreso_Proveedor : UserControl
+    public partial class uscMantenimientoProveedores : UserControl
     {
-        public uscIngreso_Proveedor()
+        public uscMantenimientoProveedores()
         {
             InitializeComponent();
         }

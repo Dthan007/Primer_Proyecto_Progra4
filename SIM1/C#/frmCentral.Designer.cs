@@ -29,51 +29,73 @@
         private void InitializeComponent()
         {
             mspGeneral = new MenuStrip();
-            opcion1ToolStripMenuItem = new ToolStripMenuItem();
             comprasToolStripMenuItem = new ToolStripMenuItem();
-            ingresoYMantenimientoToolStripMenuItem = new ToolStripMenuItem();
-            nuevoProveedorToolStripMenuItem = new ToolStripMenuItem();
-            pnlGeneral = new Panel();
             compraProveedorToolStripMenuItem = new ToolStripMenuItem();
+            salidaProductoToolStripMenuItem = new ToolStripMenuItem();
+            mantenimientoToolStripMenuItem = new ToolStripMenuItem();
+            productosToolStripMenuItem = new ToolStripMenuItem();
+            proveedoresToolStripMenuItem = new ToolStripMenuItem();
+            clientesToolStripMenuItem = new ToolStripMenuItem();
+            pnlGeneral = new Panel();
             mspGeneral.SuspendLayout();
             SuspendLayout();
             // 
             // mspGeneral
             // 
-            mspGeneral.Items.AddRange(new ToolStripItem[] { opcion1ToolStripMenuItem, comprasToolStripMenuItem, ingresoYMantenimientoToolStripMenuItem, nuevoProveedorToolStripMenuItem, compraProveedorToolStripMenuItem });
+            mspGeneral.Items.AddRange(new ToolStripItem[] { comprasToolStripMenuItem, compraProveedorToolStripMenuItem, salidaProductoToolStripMenuItem, mantenimientoToolStripMenuItem });
             mspGeneral.Location = new Point(0, 0);
             mspGeneral.Name = "mspGeneral";
             mspGeneral.Size = new Size(844, 24);
             mspGeneral.TabIndex = 0;
             mspGeneral.Text = "menuStrip1";
             // 
-            // opcion1ToolStripMenuItem
-            // 
-            opcion1ToolStripMenuItem.Name = "opcion1ToolStripMenuItem";
-            opcion1ToolStripMenuItem.Size = new Size(162, 20);
-            opcion1ToolStripMenuItem.Text = "Mantenimiento de Clientes";
-            opcion1ToolStripMenuItem.Click += opcion1ToolStripMenuItem_Click;
-            // 
             // comprasToolStripMenuItem
             // 
             comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            comprasToolStripMenuItem.Size = new Size(67, 20);
-            comprasToolStripMenuItem.Text = "Compras";
+            comprasToolStripMenuItem.Size = new Size(113, 20);
+            comprasToolStripMenuItem.Text = "Registro Compras";
             comprasToolStripMenuItem.Click += comprasToolStripMenuItem_Click;
             // 
-            // ingresoYMantenimientoToolStripMenuItem
+            // compraProveedorToolStripMenuItem
             // 
-            ingresoYMantenimientoToolStripMenuItem.Name = "ingresoYMantenimientoToolStripMenuItem";
-            ingresoYMantenimientoToolStripMenuItem.Size = new Size(106, 20);
-            ingresoYMantenimientoToolStripMenuItem.Text = "Nuevo Producto";
-            ingresoYMantenimientoToolStripMenuItem.Click += ingresoYMantenimientoToolStripMenuItem_Click;
+            compraProveedorToolStripMenuItem.Name = "compraProveedorToolStripMenuItem";
+            compraProveedorToolStripMenuItem.Size = new Size(114, 20);
+            compraProveedorToolStripMenuItem.Text = "Compra Producto";
+            compraProveedorToolStripMenuItem.Click += compraProveedorToolStripMenuItem_Click;
             // 
-            // nuevoProveedorToolStripMenuItem
+            // salidaProductoToolStripMenuItem
             // 
-            nuevoProveedorToolStripMenuItem.Name = "nuevoProveedorToolStripMenuItem";
-            nuevoProveedorToolStripMenuItem.Size = new Size(111, 20);
-            nuevoProveedorToolStripMenuItem.Text = "Nuevo Proveedor";
-            nuevoProveedorToolStripMenuItem.Click += nuevoProveedorToolStripMenuItem_Click;
+            salidaProductoToolStripMenuItem.Name = "salidaProductoToolStripMenuItem";
+            salidaProductoToolStripMenuItem.Size = new Size(102, 20);
+            salidaProductoToolStripMenuItem.Text = "Salida Producto";
+            // 
+            // mantenimientoToolStripMenuItem
+            // 
+            mantenimientoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { productosToolStripMenuItem, proveedoresToolStripMenuItem, clientesToolStripMenuItem });
+            mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
+            mantenimientoToolStripMenuItem.Size = new Size(101, 20);
+            mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            // 
+            // productosToolStripMenuItem
+            // 
+            productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            productosToolStripMenuItem.Size = new Size(139, 22);
+            productosToolStripMenuItem.Text = "Productos";
+            productosToolStripMenuItem.Click += productosToolStripMenuItem_Click;
+            // 
+            // proveedoresToolStripMenuItem
+            // 
+            proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            proveedoresToolStripMenuItem.Size = new Size(139, 22);
+            proveedoresToolStripMenuItem.Text = "Proveedores";
+            proveedoresToolStripMenuItem.Click += proveedoresToolStripMenuItem_Click;
+            // 
+            // clientesToolStripMenuItem
+            // 
+            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            clientesToolStripMenuItem.Size = new Size(139, 22);
+            clientesToolStripMenuItem.Text = "Clientes";
+            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // pnlGeneral
             // 
@@ -81,13 +103,6 @@
             pnlGeneral.Name = "pnlGeneral";
             pnlGeneral.Size = new Size(832, 451);
             pnlGeneral.TabIndex = 1;
-            // 
-            // compraProveedorToolStripMenuItem
-            // 
-            compraProveedorToolStripMenuItem.Name = "compraProveedorToolStripMenuItem";
-            compraProveedorToolStripMenuItem.Size = new Size(119, 20);
-            compraProveedorToolStripMenuItem.Text = "Compra Proveedor";
-            compraProveedorToolStripMenuItem.Click += compraProveedorToolStripMenuItem_Click;
             // 
             // frmCentral
             // 
@@ -98,7 +113,7 @@
             Controls.Add(mspGeneral);
             MainMenuStrip = mspGeneral;
             Name = "frmCentral";
-            Text = "Form1";
+            Text = "Nova Online";
             mspGeneral.ResumeLayout(false);
             mspGeneral.PerformLayout();
             ResumeLayout(false);
@@ -108,11 +123,13 @@
         #endregion
 
         private MenuStrip mspGeneral;
-        private ToolStripMenuItem opcion1ToolStripMenuItem;
         private ToolStripMenuItem comprasToolStripMenuItem;
-        private ToolStripMenuItem ingresoYMantenimientoToolStripMenuItem;
         private Panel pnlGeneral;
-        private ToolStripMenuItem nuevoProveedorToolStripMenuItem;
         private ToolStripMenuItem compraProveedorToolStripMenuItem;
+        private ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private ToolStripMenuItem productosToolStripMenuItem;
+        private ToolStripMenuItem proveedoresToolStripMenuItem;
+        private ToolStripMenuItem clientesToolStripMenuItem;
+        private ToolStripMenuItem salidaProductoToolStripMenuItem;
     }
 }

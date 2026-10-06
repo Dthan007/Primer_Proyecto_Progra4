@@ -1,6 +1,6 @@
 ﻿namespace Sistema_de_Ventas_y_Distribución.UserVentanas
 {
-    partial class uscIngreso_Proveedor
+    partial class uscMantenimientoProveedores
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
