@@ -146,6 +146,7 @@
             txtNumeroCompra.Font = new Font("Segoe UI", 12F);
             txtNumeroCompra.Location = new Point(170, 21);
             txtNumeroCompra.Name = "txtNumeroCompra";
+            txtNumeroCompra.PlaceholderText = "2526202099";
             txtNumeroCompra.Size = new Size(200, 29);
             txtNumeroCompra.TabIndex = 9;
             // 
@@ -154,6 +155,7 @@
             txtIdentificacionCliente.Font = new Font("Segoe UI", 12F);
             txtIdentificacionCliente.Location = new Point(170, 61);
             txtIdentificacionCliente.Name = "txtIdentificacionCliente";
+            txtIdentificacionCliente.PlaceholderText = "305260546";
             txtIdentificacionCliente.Size = new Size(200, 29);
             txtIdentificacionCliente.TabIndex = 10;
             // 
@@ -162,6 +164,7 @@
             txtFechaCompra.Font = new Font("Segoe UI", 12F);
             txtFechaCompra.Location = new Point(170, 100);
             txtFechaCompra.Name = "txtFechaCompra";
+            txtFechaCompra.PlaceholderText = "5/10/2026";
             txtFechaCompra.Size = new Size(200, 29);
             txtFechaCompra.TabIndex = 11;
             // 
@@ -170,6 +173,7 @@
             txtTotalCompra.Font = new Font("Segoe UI", 12F);
             txtTotalCompra.Location = new Point(170, 142);
             txtTotalCompra.Name = "txtTotalCompra";
+            txtTotalCompra.PlaceholderText = "15000.50";
             txtTotalCompra.Size = new Size(200, 29);
             txtTotalCompra.TabIndex = 12;
             // 
@@ -178,6 +182,7 @@
             txtNumeroTarjeta.Font = new Font("Segoe UI", 12F);
             txtNumeroTarjeta.Location = new Point(590, 21);
             txtNumeroTarjeta.Name = "txtNumeroTarjeta";
+            txtNumeroTarjeta.PlaceholderText = "1111222233334444";
             txtNumeroTarjeta.Size = new Size(200, 29);
             txtNumeroTarjeta.TabIndex = 13;
             // 
@@ -186,6 +191,7 @@
             txtFechaVencimiento.Font = new Font("Segoe UI", 12F);
             txtFechaVencimiento.Location = new Point(590, 61);
             txtFechaVencimiento.Name = "txtFechaVencimiento";
+            txtFechaVencimiento.PlaceholderText = "05/10";
             txtFechaVencimiento.Size = new Size(200, 29);
             txtFechaVencimiento.TabIndex = 14;
             // 
@@ -194,6 +200,7 @@
             txtCvv.Font = new Font("Segoe UI", 12F);
             txtCvv.Location = new Point(590, 100);
             txtCvv.Name = "txtCvv";
+            txtCvv.PlaceholderText = "123";
             txtCvv.Size = new Size(200, 29);
             txtCvv.TabIndex = 15;
             // 
