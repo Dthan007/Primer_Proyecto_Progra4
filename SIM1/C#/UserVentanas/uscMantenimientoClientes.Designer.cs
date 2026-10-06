@@ -154,6 +154,7 @@
             txtIdentificacion.Font = new Font("Segoe UI", 12F);
             txtIdentificacion.Location = new Point(174, 60);
             txtIdentificacion.Name = "txtIdentificacion";
+            txtIdentificacion.PlaceholderText = "305260512";
             txtIdentificacion.Size = new Size(200, 29);
             txtIdentificacion.TabIndex = 10;
             // 
@@ -162,6 +163,7 @@
             txtPaisOrigen.Font = new Font("Segoe UI", 12F);
             txtPaisOrigen.Location = new Point(544, 20);
             txtPaisOrigen.Name = "txtPaisOrigen";
+            txtPaisOrigen.PlaceholderText = "CR";
             txtPaisOrigen.Size = new Size(200, 29);
             txtPaisOrigen.TabIndex = 11;
             // 
@@ -194,6 +196,7 @@
             txtCorreo.Font = new Font("Segoe UI", 12F);
             txtCorreo.Location = new Point(544, 60);
             txtCorreo.Name = "txtCorreo";
+            txtCorreo.PlaceholderText = "correo@gmail.com";
             txtCorreo.Size = new Size(200, 29);
             txtCorreo.TabIndex = 15;
             // 
@@ -202,6 +205,7 @@
             txtTelefono.Font = new Font("Segoe UI", 12F);
             txtTelefono.Location = new Point(544, 99);
             txtTelefono.Name = "txtTelefono";
+            txtTelefono.PlaceholderText = "12345678";
             txtTelefono.Size = new Size(200, 29);
             txtTelefono.TabIndex = 16;
             // 
@@ -210,6 +214,7 @@
             txtDireccion.Font = new Font("Segoe UI", 12F);
             txtDireccion.Location = new Point(544, 139);
             txtDireccion.Name = "txtDireccion";
+            txtDireccion.PlaceholderText = "Cartago, Costa Rica";
             txtDireccion.Size = new Size(200, 29);
             txtDireccion.TabIndex = 17;
             // 
