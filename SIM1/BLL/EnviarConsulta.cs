@@ -19,6 +19,6 @@
             {
                 socket.Desconectar();
             }
-        }
-    }
-}
+        }//ProcesarElemento.
+    }//EnviarConsulta.
+}//BLL.

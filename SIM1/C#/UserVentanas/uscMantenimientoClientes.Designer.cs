@@ -52,6 +52,7 @@
             // 
             // cmbTipoTransaccion
             // 
+            cmbTipoTransaccion.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipoTransaccion.Font = new Font("Segoe UI", 12F);
             cmbTipoTransaccion.FormattingEnabled = true;
             cmbTipoTransaccion.Items.AddRange(new object[] { "Agregar", "Modificar", "Borrar" });

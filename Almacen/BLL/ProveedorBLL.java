@@ -67,5 +67,5 @@ public class ProveedorBLL
         {
             return "ERROR: " + e.getMessage();
         }
-    }
-}
+    }//procesoTrama.
+}//ProveedorBLL.

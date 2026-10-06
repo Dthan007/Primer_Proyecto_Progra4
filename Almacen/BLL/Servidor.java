@@ -34,7 +34,7 @@ public class Servidor {
 
             System.out.println("Error del servidor: " + ex.getMessage());
         }
-    }
+    }//main.
 
     private static void atenderCliente(Socket cliente, BitacoraService bitacoraService) 
     {
@@ -68,9 +68,9 @@ public class Servidor {
 
                 System.out.println("Mensaje recibido: " + mensaje);
                 
-                bitacoraService.registrar(mensaje);
-                
-                Bitacora.registrar(mensaje);
+                //No borrar por si falla algo. 
+                //bitacoraService.registrar(mensaje);
+                //Bitacora.registrar(mensaje);
 
                 String[] datos = mensaje.split("\\|", -1);
                 System.out.println("TIPO DE TRAMA: [" + datos[0] + "]");
@@ -105,5 +105,5 @@ public class Servidor {
 
             System.out.println("Error con el cliente: " + ex.getMessage());
         }
-    }
-}
+    }//atenderCliente.
+}//Servidor.

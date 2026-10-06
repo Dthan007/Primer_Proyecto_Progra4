@@ -22,4 +22,4 @@ public class DetalleCompra
     {
         return cantidad;
     }
-}
+}//DetalleCompra.

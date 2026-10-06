@@ -4,19 +4,19 @@ public class ProveedorValidacion
 {
     public String validar(String[] datos)
     {
-        // Cantidad de datos
+        //Cantidad de datos
         if (datos.length != 8)
         {
             return "La trama debe contener 8 datos";
         }
 
-        // Identificador
+        //Identificador
         if (!datos[0].equals("PROVEEDOR"))
         {
             return "Operación no válida";
         }
 
-        // Transacción
+        //Transacción
         if (datos[1].isEmpty())
         {
             return "La transacción está vacía";
@@ -32,7 +32,7 @@ public class ProveedorValidacion
             return "La transacción debe ser 0 o 1";
         }
 
-        // ID Jurídica
+        //ID Jurídica
         if (datos[2].isEmpty())
         {
             return "La identificación jurídica está vacía";
@@ -48,7 +48,7 @@ public class ProveedorValidacion
             return "La identificación jurídica debe contener únicamente números";
         }
 
-        // Nombre empresa
+        //Nombre empresa
         if (datos[3].isEmpty())
         {
             return "El nombre de la empresa está vacío";
@@ -59,7 +59,7 @@ public class ProveedorValidacion
             return "El nombre de la empresa no puede superar 100 caracteres";
         }
 
-        // Nombre contacto
+        //Nombre contacto
         if (datos[4].isEmpty())
         {
             return "El nombre del contacto está vacío";
@@ -70,7 +70,7 @@ public class ProveedorValidacion
             return "El nombre del contacto no puede superar 75 caracteres";
         }
 
-        // Teléfono
+        //Teléfono
         if (datos[5].isEmpty())
         {
             return "El teléfono está vacío";
@@ -86,7 +86,7 @@ public class ProveedorValidacion
             return "El teléfono debe contener únicamente números";
         }
 
-        // Correo
+        //Correo
         if (datos[6].isEmpty())
         {
             return "El correo está vacío";
@@ -102,7 +102,7 @@ public class ProveedorValidacion
             return "El correo no tiene un formato válido";
         }
 
-        // Estado
+        //Estado
         if (datos[7].isEmpty())
         {
             return "El estado está vacío";
@@ -119,5 +119,5 @@ public class ProveedorValidacion
         }
 
         return "OK";
-    }
-}
+    }//validar.
+}//ProveedorValidacion.

@@ -47,7 +47,5 @@ public class ProductoBLL
         {
             return "ERROR: Los datos numéricos no son válidos";
         }
-    }
-
-    
-}
+    }//procesoTrama.
+}//ProductoBLL.

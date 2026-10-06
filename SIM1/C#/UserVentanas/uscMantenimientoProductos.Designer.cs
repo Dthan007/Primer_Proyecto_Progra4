@@ -96,7 +96,7 @@
             txtNoProducto.Location = new Point(166, 78);
             txtNoProducto.MaxLength = 10;
             txtNoProducto.Name = "txtNoProducto";
-            txtNoProducto.PlaceholderText = "10 Dígitos";
+            txtNoProducto.PlaceholderText = "1234567890";
             txtNoProducto.Size = new Size(158, 29);
             txtNoProducto.TabIndex = 2;
             // 
@@ -115,27 +115,26 @@
             // 
             txtPrecio.Font = new Font("Segoe UI", 12F);
             txtPrecio.Location = new Point(166, 136);
-            txtPrecio.MaxLength = 8;
+            txtPrecio.MaxLength = 9;
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.PlaceholderText = "8 Dígitos (2 decimales)";
+            txtPrecio.PlaceholderText = "000000,00";
             txtPrecio.Size = new Size(158, 29);
             txtPrecio.TabIndex = 4;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(409, 207);
+            btnAceptar.Location = new Point(354, 190);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(96, 34);
+            btnAceptar.Size = new Size(266, 34);
             btnAceptar.TabIndex = 5;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
             // 
-            // uscIngreso_Producto
+            // uscMantenimientoProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(btnAceptar);
             Controls.Add(txtPrecio);
             Controls.Add(txtNombre);
@@ -145,8 +144,8 @@
             Controls.Add(lblNoProducto);
             Controls.Add(lblTipoTransaccion);
             Controls.Add(cmbTipoTransaccion);
-            Name = "uscIngreso_Producto";
-            Size = new Size(669, 303);
+            Name = "uscMantenimientoProductos";
+            Size = new Size(671, 305);
             ResumeLayout(false);
             PerformLayout();
         }

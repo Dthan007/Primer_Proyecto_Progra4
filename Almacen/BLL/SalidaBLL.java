@@ -44,5 +44,5 @@ public class SalidaBLL {
         } catch (Exception e) {
             return "ERROR: " + e.getMessage();
         }
-    }
-}
+    }//procesoTrama.
+}//SalidaBLL.

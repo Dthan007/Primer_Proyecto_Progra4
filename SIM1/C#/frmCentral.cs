@@ -13,7 +13,6 @@ namespace Sistema_de_Ventas_y_Distribución
             uscCompras obj_C = new uscCompras();
             obj_C.Dock = DockStyle.Fill;
             pnlGeneral.Controls.Add(obj_C);
-
         }
 
         private void comprasToolStripMenuItem_Click(object sender, EventArgs e)

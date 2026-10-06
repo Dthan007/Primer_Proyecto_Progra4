@@ -1,6 +1,4 @@
-﻿using BLL;
-
-namespace Sistema_de_Ventas_y_Distribución
+﻿namespace Sistema_de_Ventas_y_Distribución
 {
     public partial class uscMantenimientoProductos : UserControl
     {
@@ -18,12 +16,21 @@ namespace Sistema_de_Ventas_y_Distribución
                 txtNombre.Text + "|" +
                 txtPrecio.Text;
 
-            EnviarConsulta productoBLL = new EnviarConsulta();
+            BLL.EnviarConsulta productoBLL = new BLL.EnviarConsulta();
             string respuesta = productoBLL.ProcesarElemento(trama);
 
             MessageBox.Show(respuesta, "Respuesta del Servidor", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            LimpiarCampos();
 
         }//btnAceptar_Click().
+
+        public void LimpiarCampos()
+        {
+            txtNoProducto.Text = "";
+            txtNombre.Text = "";
+            txtPrecio.Text = "";
+            cmbTipoTransaccion.SelectedIndex = 0;
+        }//LimpiarCampos().
     }//uscIngreso_Mantenimiento.
 }//Sistema_de_Ventas_y_Distribución. 

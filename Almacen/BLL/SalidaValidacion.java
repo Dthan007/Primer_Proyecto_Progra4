@@ -96,8 +96,5 @@ public class SalidaValidacion {
         }
 
         return "OK";
-        
-
-    }
-    
-}
+    }//validar.
+}//SalidaValidacion.

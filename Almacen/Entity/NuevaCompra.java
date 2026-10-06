@@ -40,4 +40,4 @@ public class NuevaCompra
     {
         return detalles;
     }
-}
+}//NuevaCompra

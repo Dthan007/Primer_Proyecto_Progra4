@@ -23,4 +23,4 @@ public class DetalleSalida {
         return cantidad;
     }
     
-}
+}//DetalleSalida.

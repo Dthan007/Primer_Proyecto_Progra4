@@ -4,7 +4,7 @@ public class ProductoValidacion
 {
     public String validar(String[] datos)
     {
-        // VALIDACIONES GENERALES DE LA TRAMA
+        //VALIDACIONES DE LA TRAMA
 
         if (datos == null)
         {
@@ -21,7 +21,7 @@ public class ProductoValidacion
             return "DATO INVÁLIDO: El tipo de operación está vacío";
         }
         
-        // TRANSACCIÓN
+        //TRANSACCIÓN
         if (datos[1] == null)
         {
             return "DATO INVÁLIDO: Transacción.";
@@ -39,7 +39,7 @@ public class ProductoValidacion
 
 
         
-        // PRODUCTO
+        //PRODUCTO
         if (datos[2] == null)
         {
             return "DATO INVÁLIDO: Campo NoProducto no puede estar vacío.";
@@ -66,8 +66,7 @@ public class ProductoValidacion
         }
 
 
-        
-        // NOMBRE
+        //NOMBRE
         if (datos[3] == null)
         {
             return "DATO INVÁLIDO: Campo Nombre no puede estar vacío.";
@@ -90,7 +89,7 @@ public class ProductoValidacion
 
 
         
-        // PRECIO
+        //PRECIO
         if (datos[4] == null)
         {
             return "DATO INVÁLIDO: Campo precio no puede estar vacío.";
@@ -116,5 +115,5 @@ public class ProductoValidacion
             return "DATO INVÁLIDO: El precio debe ser mayor que cero";
         }
         return "OK";
-    }
-}
+    }//validar.
+}//ProductoValidacion.

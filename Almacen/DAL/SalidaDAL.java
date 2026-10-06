@@ -61,5 +61,5 @@ public class SalidaDAL {
         } catch (Exception e) {
             return "ERROR: " +e.getMessage();
         }
-    }
-}
+    }//insertarSalida.
+}//SalidaDAL.

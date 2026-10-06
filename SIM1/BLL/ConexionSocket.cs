@@ -1,5 +1,4 @@
-﻿
-using System.Net.Sockets;
+﻿using System.Net.Sockets;
 using System.Text;
 
 namespace BLL
@@ -74,5 +73,5 @@ namespace BLL
             streamNW?.Close();
             clienteTCP?.Close();
         }
-    }
-}
+    }//ConexionSocket.
+}//BLL.

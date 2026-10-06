@@ -91,5 +91,5 @@ public class CompraDAL
         {
             return "ERROR: " + e.getMessage();
         }
-    }
-}
+    }//insertarCompra.
+}//CompraDAL.

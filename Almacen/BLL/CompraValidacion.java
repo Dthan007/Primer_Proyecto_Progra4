@@ -18,10 +18,10 @@ public class CompraValidacion
             return "Operación no válida";
         }
 
-        if (!datos[1].equals("5"))
-        {
-            return "La transacción de compra debe ser 5";
-        }
+        //if (!datos[1].equals("5"))
+        //{
+        //    return "La transacción de compra debe ser 5";
+        //}
 
         if (datos[2].isEmpty())
         {
@@ -131,5 +131,5 @@ public class CompraValidacion
         }
 
         return "OK";
-    }
-}
+    }//validar.
+}//CompraValidacion.

@@ -67,5 +67,5 @@ public class CompraBLL
         {
             return "ERROR: " + e.getMessage();
         }
-    }
-}
+    }//procesoTrama.
+}//CompraBLL.

@@ -74,5 +74,5 @@ public class ProductoDAL
             System.out.println("Error al modificar producto: " + e.getMessage());
             return "ERROR";
         }
-    }
-}
+    }//modificarProducto.
+}//ProductoDAL.

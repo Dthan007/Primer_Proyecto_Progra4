@@ -100,5 +100,5 @@ public class ProveedorDAL
             System.out.println("Error al modificar proveedor: " + e.getMessage());
             return "ERROR";
         }
-    }
-}
+    }//modificarProveedor.
+}//ProveedorDAL.

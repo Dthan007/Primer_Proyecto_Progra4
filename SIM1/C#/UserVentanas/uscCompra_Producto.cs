@@ -1,6 +1,4 @@
-﻿using BLL;
-
-namespace Sistema_de_Ventas_y_Distribución.UserVentanas
+﻿namespace Sistema_de_Ventas_y_Distribución.UserVentanas
 {
     public partial class uscCompra_Producto : UserControl
     {
@@ -13,17 +11,29 @@ namespace Sistema_de_Ventas_y_Distribución.UserVentanas
         {
             string trama =
                 "COMPRA|" +
-                cmbProductos.SelectedIndex + "|" +
+                cmbTransaccion.SelectedIndex + "|" +
                 txtIngreso.Text + "|" +
                 txtCompra.Text + "|" +
                 txtJuridica.Text + "|" +
                 txtNoProducto.Text + "|" +
                 txtCantidad.Text;
 
-            EnviarConsulta compraProveedorBLL = new EnviarConsulta();
+            BLL.EnviarConsulta compraProveedorBLL = new BLL.EnviarConsulta();
             string respuesta = compraProveedorBLL.ProcesarElemento(trama);
 
             MessageBox.Show(respuesta, "Respuesta del Servidor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            LimpiarCampos();
         }
-    }
-}
+
+        public void LimpiarCampos()
+        {
+            cmbTransaccion.SelectedIndex = -1;
+            txtIngreso.Clear();
+            txtCompra.Clear();
+            txtJuridica.Clear();
+            txtNoProducto.Clear();
+            txtCantidad.Clear();
+        }
+    }//uscCompra_Producto.
+}//Sistema_de_Ventas_y_Distribución.UserVentanas.

@@ -83,6 +83,7 @@
             txtIDjuridica.Location = new Point(157, 79);
             txtIDjuridica.MaxLength = 10;
             txtIDjuridica.Name = "txtIDjuridica";
+            txtIDjuridica.PlaceholderText = "3100550000";
             txtIDjuridica.Size = new Size(158, 29);
             txtIDjuridica.TabIndex = 3;
             // 
@@ -121,6 +122,7 @@
             txtTelefono.Location = new Point(157, 191);
             txtTelefono.MaxLength = 8;
             txtTelefono.Name = "txtTelefono";
+            txtTelefono.PlaceholderText = "88997766";
             txtTelefono.Size = new Size(158, 29);
             txtTelefono.TabIndex = 7;
             // 
@@ -202,7 +204,7 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // uscIngreso_Proveedor
+            // uscMantenimientoProveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -223,7 +225,7 @@
             Controls.Add(lblIDJuridica);
             Controls.Add(cmbTipoTransaccion);
             Controls.Add(lblTipTrans);
-            Name = "uscIngreso_Proveedor";
+            Name = "uscMantenimientoProveedores";
             Size = new Size(762, 376);
             ResumeLayout(false);
             PerformLayout();

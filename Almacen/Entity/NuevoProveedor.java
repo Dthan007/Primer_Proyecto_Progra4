@@ -45,4 +45,4 @@ public class NuevoProveedor
     {return estado;}
 
 
-}
+}//NuevoProveedor

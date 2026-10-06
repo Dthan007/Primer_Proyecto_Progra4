@@ -99,10 +99,11 @@
             // 
             // pnlGeneral
             // 
+            pnlGeneral.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlGeneral.Location = new Point(0, 27);
             pnlGeneral.Name = "pnlGeneral";
-            pnlGeneral.Size = new Size(832, 451);
-            pnlGeneral.TabIndex = 1;
+            pnlGeneral.Size = new Size(844, 463);
+            pnlGeneral.TabIndex = 0;
             // 
             // frmCentral
             // 
