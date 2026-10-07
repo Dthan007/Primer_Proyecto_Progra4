@@ -1,4 +1,5 @@
 {
+    "java.project.sourcePaths": ["Almacen"],
     "java.project.referencedLibraries": [
         "Almacen/lib/*.jar"
     ]

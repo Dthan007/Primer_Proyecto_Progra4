@@ -1,7 +1,7 @@
 import socket
 
 def construir_trama_salida(numero_factura, fecha_venta, productos):
-    
+    """
     # stub_almacen #
     
     tipo = "6"
@@ -29,7 +29,7 @@ def construir_trama_salida(numero_factura, fecha_venta, productos):
         partes.append(cantidad)
 
     return "|".join(partes)
-    """
+    
 
 
 def enviar_salida_almacen(host, port, numero_factura, fecha_venta, productos):

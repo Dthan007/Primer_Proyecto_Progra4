@@ -48,6 +48,8 @@ public class Servidor {
             ProveedorBLL proveedorBLL = new ProveedorBLL();
             CompraBLL compraBLL = new CompraBLL();
 
+            SalidaBLL salidaBLL = new SalidaBLL(); //Almacen 4
+
             byte[] buffer = new byte[1024];
 
             while (true) {
@@ -88,6 +90,9 @@ public class Servidor {
                 else if (datos[0].equals("COMPRA"))
                 {
                     respuesta = compraBLL.procesoTrama(mensaje);
+                }
+                else if (datos[0].equals("SALIDA")){
+                    respuesta = salidaBLL.procesoTrama(mensaje);
                 }
                 else
                 {
