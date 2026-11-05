@@ -115,9 +115,9 @@
             // 
             txtPrecio.Font = new Font("Segoe UI", 12F);
             txtPrecio.Location = new Point(166, 136);
-            txtPrecio.MaxLength = 9;
+            txtPrecio.MaxLength = 8;
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.PlaceholderText = "000000,00";
+            txtPrecio.PlaceholderText = "00000000";
             txtPrecio.Size = new Size(158, 29);
             txtPrecio.TabIndex = 4;
             // 
